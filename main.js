@@ -26,11 +26,6 @@ document.querySelector('.create-swap').addEventListener('click', function() {
     document.querySelector('.popup-overlay').style.display = 'block';
 });
 
-// document.querySelector('.popup-close').addEventListener('click', function() {
-//     document.querySelector('.popup').style.display = 'none';
-//     document.querySelector('.popup-overlay').style.display = 'none';
-// });
-
 // Handle class selection and show section options
 document.getElementById('class-select').addEventListener('change', function() {
     const selectedClass = this.value;

@@ -25,6 +25,25 @@ h1 {
     font-size: 16px;
     cursor: pointer;
 }
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #7F8C8D;
+    margin-bottom: 40px;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #515559;
+    outline: none;
+}
 .container {
     display: flex;
     flex-direction: column;
