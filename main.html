@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Swap Hub</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Class Swap Hub</h1>
+        <button class="create-swap">+ Create a Swap</button>
+    </div>
+    <div class="container">
+        <div class="category">🔥 Hot Swaps</div>
+        <div class="card-container">
+            <div class="card" data-email="cs101@brown.edu">
+                <h2>CS101 - Section A</h2>
+                <p>Looking to switch to Section B</p>
+                <button class="btn swap-btn">Request Swap</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay"></div>
+    <div class="popup">
+        <h2>Request Swap</h2>
+        <p>Contact Email: <span id="swap-email"></span></p>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <button class="popup-close">Close</button>
+    </div>
+    
+    
+    <div class="popup-overlay"></div>
+    <div class="popup create-swap-popup">
+        <h2>Create a Swap</h2>
+        <label for="class-select">Select a Class:</label>
+        <select id="class-select">
+            <option value="">-- Select a Class --</option>
+            <option value="CS101">CS101</option>
+            <option value="MATH200">MATH200</option>
+            <option value="PHYS150">PHYS150</option>
+        </select>
+
+        <div id="section-selection" style="display: none;">
+            <label for="from-section">Switching Out of:</label>
+            <select id="from-section">
+                <option value="">-- Select a Section --</option>
+            </select>
+
+            <label for="to-section">Switching Into:</label>
+            <select id="to-section">
+                <option value="">-- Select a Section --</option>
+            </select>
+        </div>
+
+        <button id="confirm-swap">Confirm Swap</button>
+        <button class="popup-close">Close</button>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
