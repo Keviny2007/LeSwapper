@@ -38,36 +38,36 @@ document.querySelector('.create-swap').addEventListener('click', function() {
 });
 
 // Handle class selection and show section options
-document.getElementById('class-select').addEventListener('change', function() {
-    const selectedClass = this.value;
-    const sectionSelect = document.getElementById('section-selection');
-    const fromSection = document.getElementById('from-section');
-    const toSection = document.getElementById('to-section');
+// document.getElementById('class-select').addEventListener('change', function() {
+//     const selectedClass = this.value;
+//     const sectionSelect = document.getElementById('section-selection');
+//     const fromSection = document.getElementById('from-section');
+//     const toSection = document.getElementById('to-section');
 
-    if (selectedClass) {
-        sectionSelect.style.display = 'block';
+//     if (selectedClass) {
+//         sectionSelect.style.display = 'block';
         
-        // Example sections for demo purposes
-        const sections = {
-            'CS101': ['Section A', 'Section B', 'Section C'],
-            'MATH200': ['Lecture 1', 'Lecture 2'],
-            'PHYS150': ['Group X', 'Group Y']
-        };
+//         // Example sections for demo purposes
+//         const sections = {
+//             'CS101': ['Section A', 'Section B', 'Section C'],
+//             'MATH200': ['Lecture 1', 'Lecture 2'],
+//             'PHYS150': ['Group X', 'Group Y']
+//         };
 
-        // Populate sections dynamically
-        fromSection.innerHTML = '<option value="">-- Select a Section --</option>';
-        toSection.innerHTML = '<option value="">-- Select a Section --</option>';
+//         // Populate sections dynamically
+//         fromSection.innerHTML = '<option value="">-- Select a Section --</option>';
+//         toSection.innerHTML = '<option value="">-- Select a Section --</option>';
         
-        sections[selectedClass].forEach(section => {
-            const option1 = new Option(section, section);
-            const option2 = new Option(section, section);
-            fromSection.add(option1);
-            toSection.add(option2);
-        });
-    } else {
-        sectionSelect.style.display = 'none';
-    }
-});
+//         sections[selectedClass].forEach(section => {
+//             const option1 = new Option(section, section);
+//             const option2 = new Option(section, section);
+//             fromSection.add(option1);
+//             toSection.add(option2);
+//         });
+//     } else {
+//         sectionSelect.style.display = 'none';
+//     }
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.querySelector('.toggle-mode');
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check the stored mode in localStorage
     if (localStorage.getItem('mode') === 'lebron') {
         themeLink.href = 'lebron.css';  // LeBron Mode
-        toggleButton.textContent = 'Toggle Mode';
+        toggleButton.textContent = 'Lock In';
     } else {
         themeLink.href = 'normal.css';  // Normal Mode
         toggleButton.textContent = 'Toggle Mode';
@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
         if (themeLink.href.includes('lebron.css')) {
             themeLink.href = 'normal.css';
-            toggleButton.textContent = 'Toggle Mode';
+            toggleButton.textContent = 'Lebron';
             localStorage.setItem('mode', 'normal');
         } else {
             themeLink.href = 'lebron.css';
-            toggleButton.textContent = 'Toggle Mode';
+            toggleButton.textContent = 'Lock In';
             localStorage.setItem('mode', 'lebron');
         }
     });

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeSwapper</title>
-    <link id="theme-style" href="normal.css" rel="stylesheet">
+    <link id="theme-style" href="lebron.css" rel="stylesheet">
 </head>
 <body>
     <div class="animated-bg"></div>
     <div class="header">
         <h1>LeSwapper</h1>
-        <button class="toggle-mode">Toggle Mode</button>
+        <button class="toggle-mode">Lock In</button>
         <button class="create-swap">+ Create a Swap</button>
     </div>
     <p>Easily find and swap class sections with other students!</p>
@@ -18,19 +18,19 @@
         <input type="text" placeholder="Search for a class...">
     </div>
     <div class="container">
-        <div class="category">🔥 Hot Swaps</div>
+        <div class="category">🔥 Hot Swaps 🔥</div>
         <div class="card-container">
             <div class="card" data-email="cs101@brown.edu">
                 <h2>CHEM350 - S01</h2>
                 <p>Looking to switch to S02</p>
                 <button class="btn swap-btn">Request Swap</button>
             </div>
-            <div class="card">
+            <div class="card" data-email="cs101@brown.edu">
                 <h2>MATH520 - S03</h2>
                 <p>Looking to switch to S02</p>
                 <button class="btn swap-btn">Request Swap</button>
             </div>
-            <div class="card">
+            <div class="card" data-email="cs101@brown.edu">
                 <h2>MATH200 - S02</h2>
                 <p>Looking to switch to S01</p>
                 <button class="btn swap-btn">Request Swap</button>
@@ -41,7 +41,7 @@
     <div class="popup-overlay"></div>
     <div class="popup">
         <h2>Request Swap</h2>
-        <p>Contact Email: <span id="swap-email"></span></p>
+        <p style="color: #000;">Contact Email: <span id="swap-email"></span></p>
         <input type="text" id="name" placeholder="Your Name">
         <input type="email" id="email" placeholder="Your Email">
         <button class="popup-submit">Submit</button>
@@ -52,25 +52,28 @@
     <div class="popup-overlay"></div>
     <div class="popup create-swap-popup">
         <h2>Create a Swap</h2>
-        <label for="class-select">Select a Class:</label>
+        <!-- <label for="class-select">Select a Class:</label>
         <select id="class-select">
             <option value="">-- Select a Class --</option>
             <option value="CS200">CS200</option>
             <option value="MATH200">MATH200</option>
             <option value="PHYS160">PHYS160</option>
-        </select>
+        </select> -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a class...">
+        </div>
 
-        <div id="section-selection" style="display: none;">
-            <label for="from-section">Switching Out of:</label>
+        <!-- <div id="section-selection" style="display: none;">
+            <br><label for="from-section">Switching Out of:</label><br>
             <select id="from-section">
                 <option value="">-- Select a Section --</option>
             </select>
 
-            <label for="to-section">Switching Into:</label>
+            <br><label for="to-section">Switching Into:</label><br>
             <select id="to-section">
                 <option value="">-- Select a Section --</option>
             </select>
-        </div>
+        </div> -->
 
         <button class="popup-submit">Confirm Swap</button>
         <button class="popup-close">Close</button>
