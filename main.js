@@ -20,6 +20,17 @@ document.querySelectorAll('.popup-close').forEach(button => {
     });
 });
 
+document.querySelectorAll('.popup-submit').forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.style.display = 'none';
+        });
+        document.querySelectorAll('.popup-overlay').forEach(overlay => {
+            overlay.style.display = 'none';
+        });
+    });
+});
+
 // Create Swap Popup: open when create swap button is clicked.
 document.querySelector('.create-swap').addEventListener('click', function() {
     document.querySelector('.create-swap-popup').style.display = 'flex';

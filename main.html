@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Swap Hub</title>
+    <title>LeSwapper</title>
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
+    <div class="animated-bg"></div>
     <div class="header">
-        <h1>Class Swap Hub</h1>
+        <h1>LeSwapper</h1>
         <button class="create-swap">+ Create a Swap</button>
     </div>
     <p>Easily find and swap class sections with other students!</p>
@@ -19,8 +20,8 @@
         <div class="category">🔥 Hot Swaps</div>
         <div class="card-container">
             <div class="card" data-email="cs101@brown.edu">
-                <h2>CS101 - Section A</h2>
-                <p>Looking to switch to Section B</p>
+                <h2>CS200 - S01</h2>
+                <p>Looking to switch to S02</p>
                 <button class="btn swap-btn">Request Swap</button>
             </div>
         </div>
@@ -32,7 +33,8 @@
         <p>Contact Email: <span id="swap-email"></span></p>
         <input type="text" id="name" placeholder="Your Name">
         <input type="email" id="email" placeholder="Your Email">
-        <button class="popup-close">Close</button>
+        <button class="popup-submit">Submit</button>
+        <br><button class="popup-close">Close</button>
     </div>
     
     
@@ -42,9 +44,9 @@
         <label for="class-select">Select a Class:</label>
         <select id="class-select">
             <option value="">-- Select a Class --</option>
-            <option value="CS101">CS101</option>
+            <option value="CS200">CS200</option>
             <option value="MATH200">MATH200</option>
-            <option value="PHYS150">PHYS150</option>
+            <option value="PHYS160">PHYS160</option>
         </select>
 
         <div id="section-selection" style="display: none;">
@@ -59,7 +61,7 @@
             </select>
         </div>
 
-        <button id="confirm-swap">Confirm Swap</button>
+        <button class="popup-submit">Confirm Swap</button>
         <button class="popup-close">Close</button>
     </div>
 
