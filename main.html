@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeSwapper</title>
-    <link href="main.css" rel="stylesheet">
+    <link id="theme-style" href="normal.css" rel="stylesheet">
 </head>
 <body>
     <div class="animated-bg"></div>
     <div class="header">
         <h1>LeSwapper</h1>
+        <button class="toggle-mode">Toggle Mode</button>
         <button class="create-swap">+ Create a Swap</button>
     </div>
     <p>Easily find and swap class sections with other students!</p>
@@ -20,8 +21,18 @@
         <div class="category">🔥 Hot Swaps</div>
         <div class="card-container">
             <div class="card" data-email="cs101@brown.edu">
-                <h2>CS200 - S01</h2>
+                <h2>CHEM350 - S01</h2>
                 <p>Looking to switch to S02</p>
+                <button class="btn swap-btn">Request Swap</button>
+            </div>
+            <div class="card">
+                <h2>MATH520 - S03</h2>
+                <p>Looking to switch to S02</p>
+                <button class="btn swap-btn">Request Swap</button>
+            </div>
+            <div class="card">
+                <h2>MATH200 - S02</h2>
+                <p>Looking to switch to S01</p>
                 <button class="btn swap-btn">Request Swap</button>
             </div>
         </div>

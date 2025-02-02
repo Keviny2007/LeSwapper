@@ -68,3 +68,30 @@ document.getElementById('class-select').addEventListener('change', function() {
         sectionSelect.style.display = 'none';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.toggle-mode');
+    const themeLink = document.getElementById('theme-style');
+
+    // Check the stored mode in localStorage
+    if (localStorage.getItem('mode') === 'lebron') {
+        themeLink.href = 'lebron.css';  // LeBron Mode
+        toggleButton.textContent = 'Toggle Mode';
+    } else {
+        themeLink.href = 'normal.css';  // Normal Mode
+        toggleButton.textContent = 'Toggle Mode';
+    }
+
+    // Toggle between modes
+    toggleButton.addEventListener('click', function () {
+        if (themeLink.href.includes('lebron.css')) {
+            themeLink.href = 'normal.css';
+            toggleButton.textContent = 'Toggle Mode';
+            localStorage.setItem('mode', 'normal');
+        } else {
+            themeLink.href = 'lebron.css';
+            toggleButton.textContent = 'Toggle Mode';
+            localStorage.setItem('mode', 'lebron');
+        }
+    });
+});
