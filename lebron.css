@@ -33,6 +33,16 @@ body {
 h1 {
     font-size: 24px;
 }
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; }
+    50% { text-shadow: -2px -2px #ff0000, 2px 2px #00ff00; }
+    100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; }
+}
 .toggle-mode {
     background: #000;
     color: #ffcc00;
@@ -42,6 +52,10 @@ h1 {
     font-size: 14px;
     cursor: pointer;
     font-family: "Silkscreen", sans-serif;
+    animation: flicker 1s infinite alternate;
+}
+.toggle-mode:hover {
+    animation: glitch 0.2s infinite alternate;
 }
 .create-swap {
     background: #000;
@@ -52,6 +66,9 @@ h1 {
     font-size: 14px;
     cursor: pointer;
     font-family: "Silkscreen", sans-serif;
+}
+.create-swap:hover {
+    animation: glitch 0.2s infinite alternate;
 }
 p {
     text-align: center;
