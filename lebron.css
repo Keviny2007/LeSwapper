@@ -4,7 +4,6 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     color: #000;
 }
 .animated-bg {
@@ -26,8 +25,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: #ffcc00;
-    color: #000;
+    background: rgba(255, 204, 0, 0.8);
+    border-bottom: 4px solid #ffcc00;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.4);
+    color: black;
 }
 h1 {
     font-size: 24px;
@@ -75,6 +76,10 @@ p {
     border-radius: 8px;
     border: 2px solid #515559;
     outline: none;
+    background: black;
+    color: #ffcc00;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
     font-family: "Silkscreen", sans-serif;
 }
 .container {
@@ -84,28 +89,51 @@ p {
     gap: 20px;
     padding: 40px;
 }
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
 .category {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     color: #ff5733;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(255, 102, 0, 0.8);
+    animation: flicker 0.8s infinite alternate;
 }
 .card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .card {
+    width: calc(33.333% - 20px);
+    max-width: 320px;
     background: #222;
     border: 4px solid #ffcc00;
     border-radius: 12px;
     padding: 25px;
-    width: 320px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; box-shadow: 0.3s ease;
+}
+@media (max-width: 900px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row */
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* 1 card per row */
+    }
 }
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
 }
 .card h2 {
     font-size: 16px;
@@ -130,6 +158,9 @@ p {
     transition: background 0.3s ease;
     font-family: "Silkscreen", sans-serif;
 }
+.btn:active {
+    transform: translateY(3px);
+}
 .swap-btn { background-color: #ff5733; color: #fff; border: none; }
 .swap-btn:hover { background-color: #c0392b; }
 /* .shop-btn { border: 2px solid #ff5733; color: #ff5733; background: none; }
@@ -141,7 +172,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #aa9d9d;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -149,6 +180,7 @@ p {
     flex-direction: column;
     align-items: center;
     z-index: 10;
+    border: 4px solid #ffcc00;
 }
 .popup input {
     width: 90%;
@@ -176,7 +208,7 @@ p {
 }
 .popup-submit {
     background: #ffcc00;
-    color: #000;
+    color: #fff;
     font-family: "Silkscreen", sans-serif;
 }
 .popup-submit:hover {
